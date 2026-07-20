@@ -1,4 +1,3 @@
-ECHO is on.
 name: Deploy to InfinityFree
 on:
   push:

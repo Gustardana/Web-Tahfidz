@@ -1,0 +1,1819 @@
+ERROR - 2026-07-16 02:42:43 --> Duplicate key name 'nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-07-16-000004_CreateSantriTable.php(88): CodeIgniter\Database\Forge->createTable('santri')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateSantriTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:42:43 --> ErrorException: require(C:\xampp\htdocs\tahfidz-master\app\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory
+[Method: CLI, Route: migrate]
+in SYSTEMPATH\CLI\BaseCommand.php on line 133.
+ 1 SYSTEMPATH\CLI\BaseCommand.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\tahfidz-master\\app\\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tahfidz-master\\system\\CLI\\BaseCommand.php', 133)
+ 2 SYSTEMPATH\CLI\BaseCommand.php(133): require()
+ 3 SYSTEMPATH\Commands\Database\Migrate.php(104): CodeIgniter\CLI\BaseCommand->showError(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+ 4 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+ 6 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:42:43 --> ErrorException: Uncaught ErrorException: Undefined array key "args" in C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php:398
+Stack trace:
+#0 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(398): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 398)
+#1 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(372): CodeIgniter\Debug\Exceptions->maskSensitiveData(Array, Array)
+#2 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(345): CodeIgniter\Debug\Exceptions->collectVars(Object(ErrorException), 500)
+#3 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(352): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(183): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+require(C:\xampp\htdocs\tahfidz-master\app\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\tahfidz-master\system\CLI\BaseCommand.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xamp...', 'C:\\xampp\\htdocs...', 133)
+#1 C:\xampp\htdocs\tahfidz-master\system\CLI\BaseCommand.php(133): require()
+#2 C:\xampp\htdocs\tahfidz-master\system\Commands\Database\Migrate.php(104): CodeIgniter\CLI\BaseCommand->showError(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#3 C:\xampp\htdocs\tahfidz-master\system\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run(Array)
+#4 C:\xampp\htdocs\tahfidz-master\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#5 C:\xampp\htdocs\tahfidz-master\system\Boot.php(444): CodeIgniter\CLI\Console->run()
+#6 C:\xampp\htdocs\tahfidz-master\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#7 C:\xampp\htdocs\tahfidz-master\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#8 {main}
+[Method: CLI, Route: migrate]
+in SYSTEMPATH\Debug\Exceptions.php on line 398.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2026-07-16 02:42:56 --> Table 'db_tahfidz.santri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:42:56\',1,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',0,\'aktif\',\'2010-05-20\',\'Jakarta\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:42:56\',1,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',0,\'aktif\',\'2010-05-20\',\'Jakarta\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:42:56\',1,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',0,\'aktif\',\'2010-05-20\',\'Jakarta\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:42:56\',1,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',0,\'aktif\',\'2010-05-20\',\'Jakarta\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\MasterDataSeeder.php(88): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\MasterDataSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\MasterDataSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:42:56 --> ErrorException: require(C:\xampp\htdocs\tahfidz-master\app\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory
+[Method: CLI, Route: db:seed/MasterDataSeeder]
+in SYSTEMPATH\CLI\BaseCommand.php on line 133.
+ 1 SYSTEMPATH\CLI\BaseCommand.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\tahfidz-master\\app\\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tahfidz-master\\system\\CLI\\BaseCommand.php', 133)
+ 2 SYSTEMPATH\CLI\BaseCommand.php(133): require()
+ 3 SYSTEMPATH\Commands\Database\Seed.php(81): CodeIgniter\CLI\BaseCommand->showError(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+ 4 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+ 6 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:42:56 --> ErrorException: Uncaught ErrorException: Undefined array key "args" in C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php:398
+Stack trace:
+#0 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(398): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 398)
+#1 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(372): CodeIgniter\Debug\Exceptions->maskSensitiveData(Array, Array)
+#2 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(345): CodeIgniter\Debug\Exceptions->collectVars(Object(ErrorException), 500)
+#3 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(352): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(183): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+require(C:\xampp\htdocs\tahfidz-master\app\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\tahfidz-master\system\CLI\BaseCommand.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xamp...', 'C:\\xampp\\htdocs...', 133)
+#1 C:\xampp\htdocs\tahfidz-master\system\CLI\BaseCommand.php(133): require()
+#2 C:\xampp\htdocs\tahfidz-master\system\Commands\Database\Seed.php(81): CodeIgniter\CLI\BaseCommand->showError(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#3 C:\xampp\htdocs\tahfidz-master\system\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run(Array)
+#4 C:\xampp\htdocs\tahfidz-master\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#5 C:\xampp\htdocs\tahfidz-master\system\Boot.php(444): CodeIgniter\CLI\Console->run()
+#6 C:\xampp\htdocs\tahfidz-master\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#7 C:\xampp\htdocs\tahfidz-master\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#8 {main}
+[Method: CLI, Route: db:seed/MasterDataSeeder]
+in SYSTEMPATH\Debug\Exceptions.php on line 398.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2026-07-16 02:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 02:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 02:50:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 02:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-16 02:50:39 --> CodeIgniter\Exceptions\InvalidArgumentException: Cache key contains reserved characters {}()/\@:
+[Method: GET, Route: login]
+in SYSTEMPATH\Cache\Handlers\BaseHandler.php on line 71.
+ 1 SYSTEMPATH\Cache\Handlers\FileHandler.php(81): CodeIgniter\Cache\Handlers\BaseHandler::validateKey('throttler_::1', '')
+ 2 SYSTEMPATH\Throttle\Throttler.php(104): CodeIgniter\Cache\Handlers\FileHandler->get('throttler_::1')
+ 3 APPPATH\Filters\RateLimitFilter.php(24): CodeIgniter\Throttle\Throttler->check('::1', 5, 60)
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\RateLimitFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('login', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+DEBUG - 2026-07-16 02:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 02:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-07-16 02:51:09 --> CodeIgniter\Exceptions\InvalidArgumentException: Cache key contains reserved characters {}()/\@:
+[Method: GET, Route: login]
+in SYSTEMPATH\Cache\Handlers\BaseHandler.php on line 71.
+ 1 SYSTEMPATH\Cache\Handlers\FileHandler.php(81): CodeIgniter\Cache\Handlers\BaseHandler::validateKey('throttler_::1', '')
+ 2 SYSTEMPATH\Throttle\Throttler.php(104): CodeIgniter\Cache\Handlers\FileHandler->get('throttler_::1')
+ 3 APPPATH\Filters\RateLimitFilter.php(24): CodeIgniter\Throttle\Throttler->check('::1', 5, 60)
+ 4 SYSTEMPATH\Filters\Filters.php(241): App\Filters\RateLimitFilter->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 5 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 6 SYSTEMPATH\CodeIgniter.php(488): CodeIgniter\Filters\Filters->run('login', 'before')
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+DEBUG - 2026-07-16 02:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 02:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 02:52:54 --> CSRF token verified.
+INFO - 2026-07-16 02:52:54 --> [ACTIVITY] LOGIN_SUCCESS | User admin_pusat berhasil login.
+ERROR - 2026-07-16 02:52:54 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 02:52:54\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 02:52:54\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 02:52:54\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(38): App\Libraries\ActivityLogger::log('LOGIN_SUCCESS', 'User admin_pusat berhasil login.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 02:52:54 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 02:52:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-16 02:52:55 --> Table 'db_tahfidz.santri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `santri`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `santri`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `santri`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1743): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `santri`', [], false)
+ 5 APPPATH\Controllers\DashboardController.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:52:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_tahfidz.santri' doesn't exist
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1743): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `santri`', [], false)
+ 2 APPPATH\Controllers\DashboardController.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:52:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_tahfidz.santri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `santri`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `santri`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1743): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `santri`', [], false)
+ 4 APPPATH\Controllers\DashboardController.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:52:55 --> [Caused by] mysqli_sql_exception: Table 'db_tahfidz.santri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `santri`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `santri`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `santri`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1743): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `santri`', [], false)
+ 5 APPPATH\Controllers\DashboardController.php(18): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 02:54:34 --> Duplicate key name 'nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-07-16-000004_CreateSantriTable.php(88): CodeIgniter\Database\Forge->createTable('santri')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateSantriTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:54:34 --> ErrorException: require(C:\xampp\htdocs\tahfidz-master\app\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory
+[Method: CLI, Route: migrate]
+in SYSTEMPATH\CLI\BaseCommand.php on line 133.
+ 1 SYSTEMPATH\CLI\BaseCommand.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\tahfidz-master\\app\\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tahfidz-master\\system\\CLI\\BaseCommand.php', 133)
+ 2 SYSTEMPATH\CLI\BaseCommand.php(133): require()
+ 3 SYSTEMPATH\Commands\Database\Migrate.php(104): CodeIgniter\CLI\BaseCommand->showError(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+ 4 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+ 6 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:54:34 --> ErrorException: Uncaught ErrorException: Undefined array key "args" in C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php:398
+Stack trace:
+#0 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(398): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 398)
+#1 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(372): CodeIgniter\Debug\Exceptions->maskSensitiveData(Array, Array)
+#2 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(345): CodeIgniter\Debug\Exceptions->collectVars(Object(ErrorException), 500)
+#3 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(352): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(183): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+require(C:\xampp\htdocs\tahfidz-master\app\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\tahfidz-master\system\CLI\BaseCommand.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xamp...', 'C:\\xampp\\htdocs...', 133)
+#1 C:\xampp\htdocs\tahfidz-master\system\CLI\BaseCommand.php(133): require()
+#2 C:\xampp\htdocs\tahfidz-master\system\Commands\Database\Migrate.php(104): CodeIgniter\CLI\BaseCommand->showError(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#3 C:\xampp\htdocs\tahfidz-master\system\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run(Array)
+#4 C:\xampp\htdocs\tahfidz-master\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#5 C:\xampp\htdocs\tahfidz-master\system\Boot.php(444): CodeIgniter\CLI\Console->run()
+#6 C:\xampp\htdocs\tahfidz-master\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#7 C:\xampp\htdocs\tahfidz-master\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#8 {main}
+[Method: CLI, Route: migrate]
+in SYSTEMPATH\Debug\Exceptions.php on line 398.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2026-07-16 02:54:39 --> Table 'db_tahfidz.santri' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:54:39\',2,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',2,\'aktif\',\'2010-05-20\',\'Jakarta\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:54:39\',2,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',2,\'aktif\',\'2010-05-20\',\'Jakarta\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:54:39\',2,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',2,\'aktif\',\'2010-05-20\',\'Jakarta\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:54:39\',2,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',2,\'aktif\',\'2010-05-20\',\'Jakarta\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\MasterDataSeeder.php(88): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\MasterDataSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\MasterDataSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:54:39 --> ErrorException: require(C:\xampp\htdocs\tahfidz-master\app\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory
+[Method: CLI, Route: db:seed/MasterDataSeeder]
+in SYSTEMPATH\CLI\BaseCommand.php on line 133.
+ 1 SYSTEMPATH\CLI\BaseCommand.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xampp\\htdocs\\tahfidz-master\\app\\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\tahfidz-master\\system\\CLI\\BaseCommand.php', 133)
+ 2 SYSTEMPATH\CLI\BaseCommand.php(133): require()
+ 3 SYSTEMPATH\Commands\Database\Seed.php(81): CodeIgniter\CLI\BaseCommand->showError(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+ 4 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+ 5 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+ 6 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+ 7 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 8 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:54:39 --> ErrorException: Uncaught ErrorException: Undefined array key "args" in C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php:398
+Stack trace:
+#0 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(398): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'C:\\xampp\\htdocs...', 398)
+#1 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(372): CodeIgniter\Debug\Exceptions->maskSensitiveData(Array, Array)
+#2 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(345): CodeIgniter\Debug\Exceptions->collectVars(Object(ErrorException), 500)
+#3 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(352): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\xampp\htdocs\tahfidz-master\system\Debug\Exceptions.php(183): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+【Previous Exception】
+ErrorException
+require(C:\xampp\htdocs\tahfidz-master\app\Views/errors/html/cli/error_exception.php): Failed to open stream: No such file or directory
+#0 C:\xampp\htdocs\tahfidz-master\system\CLI\BaseCommand.php(133): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(C:\\xamp...', 'C:\\xampp\\htdocs...', 133)
+#1 C:\xampp\htdocs\tahfidz-master\system\CLI\BaseCommand.php(133): require()
+#2 C:\xampp\htdocs\tahfidz-master\system\Commands\Database\Seed.php(81): CodeIgniter\CLI\BaseCommand->showError(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#3 C:\xampp\htdocs\tahfidz-master\system\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run(Array)
+#4 C:\xampp\htdocs\tahfidz-master\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#5 C:\xampp\htdocs\tahfidz-master\system\Boot.php(444): CodeIgniter\CLI\Console->run()
+#6 C:\xampp\htdocs\tahfidz-master\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#7 C:\xampp\htdocs\tahfidz-master\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#8 {main}
+[Method: CLI, Route: db:seed/MasterDataSeeder]
+in SYSTEMPATH\Debug\Exceptions.php on line 398.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2026-07-16 02:55:15 --> Duplicate key name 'nis'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `santri` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`nis` VARCHAR(20) NOT NULL UNIQUE,
+	`nama_lengkap` VARCHAR(150) NOT NULL,
+	`tempat_lahir` VARCHAR(100) NULL,
+	`tanggal_lahir` DATE NULL,
+	`nama_ortu` VARCHAR(150) NULL,
+	`no_telp_ortu` VARCHAR(20) NULL,
+	`riwayat_penyakit` TEXT NULL,
+	`prestasi` TEXT NULL,
+	`pondokan_id` INT(11) UNSIGNED NULL,
+	`halaqoh_id` INT(11) UNSIGNED NULL,
+	`status` ENUM(\'aktif\',\'lulus\',\'keluar\') NOT NULL DEFAULT \'aktif\',
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_santri` PRIMARY KEY(`id`),
+	CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT `santri_halaqoh_id_foreign` FOREIGN KEY (`halaqoh_id`) REFERENCES `halaqoh`(`id`) ON DELETE SET NULL ON UPDATE CASCADE,
+	KEY `nis` (`nis`),
+	KEY `nama_lengkap` (`nama_lengkap`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-07-16-000004_CreateSantriTable.php(88): CodeIgniter\Database\Forge->createTable('santri')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateSantriTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-07-16 02:55:47 --> Cannot add or update a child row: a foreign key constraint fails (`db_tahfidz`.`santri`, CONSTRAINT `santri_pondokan_id_foreign` FOREIGN KEY (`pondokan_id`) REFERENCES `pondokan` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:55:47\',1,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',0,\'aktif\',\'2010-05-20\',\'Jakarta\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:55:47\',1,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',0,\'aktif\',\'2010-05-20\',\'Jakarta\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:55:47\',1,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',0,\'aktif\',\'2010-05-20\',\'Jakarta\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1851): CodeIgniter\Database\BaseConnection->query('INSERT INTO `santri` (`created_at`, `halaqoh_id`, `nama_lengkap`, `nama_ortu`, `nis`, `no_telp_ortu`, `pondokan_id`, `status`, `tanggal_lahir`, `tempat_lahir`)
+VALUES (\'2026-07-16 02:55:47\',1,\'Ahmad Fulan\',\'Bapak Fulan\',\'100100100\',\'081234567890\',0,\'aktif\',\'2010-05-20\',\'Jakarta\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2240): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\MasterDataSeeder.php(88): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\MasterDataSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\MasterDataSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(444): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-07-16 02:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-16 02:57:00 --> Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 5 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:57:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_pembayaran' in 'where clause'
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 2 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:57:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 4 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:57:00 --> [Caused by] mysqli_sql_exception: Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 5 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+DEBUG - 2026-07-16 02:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 02:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-16 02:57:05 --> Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 5 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:57:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_pembayaran' in 'where clause'
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 2 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:57:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 4 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:57:05 --> [Caused by] mysqli_sql_exception: Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 5 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+DEBUG - 2026-07-16 02:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-16 02:57:49 --> Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 5 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:57:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_pembayaran' in 'where clause'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 2 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:57:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 4 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+CRITICAL - 2026-07-16 02:57:49 --> [Caused by] mysqli_sql_exception: Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 5 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+DEBUG - 2026-07-16 02:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-16 02:58:12 --> Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 5 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:58:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_pembayaran' in 'where clause'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 2 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 5 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:58:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 4 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-07-16 02:58:12 --> [Caused by] mysqli_sql_exception: Unknown column 'status_pembayaran' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = \'success\'
+AND MONTH(created_at) = \'07\'
+AND YEAR(created_at) = \'2026\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`nominal`) AS `nominal`
+FROM `donasi`
+WHERE `status_pembayaran` = :status_pembayaran:
+AND MONTH(created_at) = :MONTH(created_at):
+AND YEAR(created_at) = :YEAR(created_at):', [...], false)
+ 5 APPPATH\Controllers\DashboardController.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\DashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-07-16 02:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:00:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:00:42 --> CSRF token verified.
+INFO - 2026-07-16 03:00:42 --> [ACTIVITY] LOGIN_SUCCESS | User admin_pusat berhasil login.
+ERROR - 2026-07-16 03:00:42 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:00:42\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:00:42\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:00:42\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(38): App\Libraries\ActivityLogger::log('LOGIN_SUCCESS', 'User admin_pusat berhasil login.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:00:42 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:05:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:06:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:07:10 --> [ACTIVITY] LOGOUT | User admin_pusat melakukan logout.
+ERROR - 2026-07-16 03:07:10 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 03:07:10\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 03:07:10\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 03:07:10\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(48): App\Libraries\ActivityLogger::log('LOGOUT', 'User admin_pusat melakukan logout.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->logout()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:07:10 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:07:52 --> [ACTIVITY] LOGOUT | User admin_pusat melakukan logout.
+ERROR - 2026-07-16 03:07:52 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 03:07:52\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 03:07:52\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 03:07:52\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(48): App\Libraries\ActivityLogger::log('LOGOUT', 'User admin_pusat melakukan logout.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->logout()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:07:52 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:07:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:08:06 --> CSRF token verified.
+INFO - 2026-07-16 03:08:06 --> [ACTIVITY] LOGIN_FAILED | Percobaan login gagal untuk username: ustazh_budi
+ERROR - 2026-07-16 03:08:06 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (NULL, \'::1\', \'LOGIN_FAILED\', \'Percobaan login gagal untuk username: ustazh_budi\', \'2026-07-16 03:08:06\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (NULL, \'::1\', \'LOGIN_FAILED\', \'Percobaan login gagal untuk username: ustazh_budi\', \'2026-07-16 03:08:06\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (NULL, \'::1\', \'LOGIN_FAILED\', \'Percobaan login gagal untuk username: ustazh_budi\', \'2026-07-16 03:08:06\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(42): App\Libraries\ActivityLogger::log('LOGIN_FAILED', 'Percobaan login gagal untuk username: ustazh_budi')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:08:06 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:08:27 --> CSRF token verified.
+INFO - 2026-07-16 03:08:27 --> [ACTIVITY] LOGIN_SUCCESS | User ustadz_budi berhasil login.
+ERROR - 2026-07-16 03:08:27 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'3\', \'::1\', \'LOGIN_SUCCESS\', \'User ustadz_budi berhasil login.\', \'2026-07-16 03:08:27\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'3\', \'::1\', \'LOGIN_SUCCESS\', \'User ustadz_budi berhasil login.\', \'2026-07-16 03:08:27\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'3\', \'::1\', \'LOGIN_SUCCESS\', \'User ustadz_budi berhasil login.\', \'2026-07-16 03:08:27\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(38): App\Libraries\ActivityLogger::log('LOGIN_SUCCESS', 'User ustadz_budi berhasil login.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:08:27 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:17:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:17:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:18:01 --> CSRF token verified.
+INFO - 2026-07-16 03:18:01 --> [ACTIVITY] LOGIN_SUCCESS | User admin_pusat berhasil login.
+ERROR - 2026-07-16 03:18:01 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:18:01\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:18:01\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:18:01\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(38): App\Libraries\ActivityLogger::log('LOGIN_SUCCESS', 'User admin_pusat berhasil login.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:18:01 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:18:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:19:39 --> CSRF token verified.
+DEBUG - 2026-07-16 03:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:20:26 --> CSRF token verified.
+INFO - 2026-07-16 03:20:26 --> [ACTIVITY] CREATE_SANTRI | Menambahkan santri baru: Gusti
+ERROR - 2026-07-16 03:20:26 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'CREATE_SANTRI\', \'Menambahkan santri baru: Gusti\', \'2026-07-16 03:20:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'CREATE_SANTRI\', \'Menambahkan santri baru: Gusti\', \'2026-07-16 03:20:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'CREATE_SANTRI\', \'Menambahkan santri baru: Gusti\', \'2026-07-16 03:20:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\SantriController.php(78): App\Libraries\ActivityLogger::log('CREATE_SANTRI', 'Menambahkan santri baru: Gusti')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\SantriController->store()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SantriController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:20:26 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:20:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:22:24 --> CSRF token verified.
+INFO - 2026-07-16 03:22:25 --> [ACTIVITY] CREATE_MUTABAAH | Input setoran surat: Albaqoroh Juz 2
+ERROR - 2026-07-16 03:22:25 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'CREATE_MUTABAAH\', \'Input setoran surat: Albaqoroh Juz 2\', \'2026-07-16 03:22:25\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'CREATE_MUTABAAH\', \'Input setoran surat: Albaqoroh Juz 2\', \'2026-07-16 03:22:25\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'CREATE_MUTABAAH\', \'Input setoran surat: Albaqoroh Juz 2\', \'2026-07-16 03:22:25\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\MutabaahController.php(72): App\Libraries\ActivityLogger::log('CREATE_MUTABAAH', 'Input setoran surat: Albaqoroh Juz 2')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\MutabaahController->store()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MutabaahController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:22:25 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:23:24 --> [ACTIVITY] LOGOUT | User admin_pusat melakukan logout.
+ERROR - 2026-07-16 03:23:24 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 03:23:24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 03:23:24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 03:23:24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(48): App\Libraries\ActivityLogger::log('LOGOUT', 'User admin_pusat melakukan logout.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->logout()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:23:24 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:24:37 --> CSRF token verified.
+INFO - 2026-07-16 03:24:37 --> [ACTIVITY] LOGIN_FAILED | Percobaan login gagal untuk username: adminpusat
+ERROR - 2026-07-16 03:24:37 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (NULL, \'::1\', \'LOGIN_FAILED\', \'Percobaan login gagal untuk username: adminpusat\', \'2026-07-16 03:24:37\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (NULL, \'::1\', \'LOGIN_FAILED\', \'Percobaan login gagal untuk username: adminpusat\', \'2026-07-16 03:24:37\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (NULL, \'::1\', \'LOGIN_FAILED\', \'Percobaan login gagal untuk username: adminpusat\', \'2026-07-16 03:24:37\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(42): App\Libraries\ActivityLogger::log('LOGIN_FAILED', 'Percobaan login gagal untuk username: adminpusat')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:24:37 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:24:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:24:54 --> CSRF token verified.
+INFO - 2026-07-16 03:24:54 --> [ACTIVITY] LOGIN_SUCCESS | User admin_pusat berhasil login.
+ERROR - 2026-07-16 03:24:54 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:24:54\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:24:54\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:24:54\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(38): App\Libraries\ActivityLogger::log('LOGIN_SUCCESS', 'User admin_pusat berhasil login.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:24:54 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:25:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:37:58 --> CSRF token verified.
+INFO - 2026-07-16 03:37:59 --> [ACTIVITY] UPDATE_PROFILE | Memperbarui data profil
+ERROR - 2026-07-16 03:37:59 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'UPDATE_PROFILE\', \'Memperbarui data profil\', \'2026-07-16 03:37:59\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'UPDATE_PROFILE\', \'Memperbarui data profil\', \'2026-07-16 03:37:59\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'UPDATE_PROFILE\', \'Memperbarui data profil\', \'2026-07-16 03:37:59\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\ProfileController.php(72): App\Libraries\ActivityLogger::log('UPDATE_PROFILE', 'Memperbarui data profil')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProfileController->update()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:37:59 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:38:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:38:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:51:30 --> [ACTIVITY] LOGOUT | User ustadz_budi melakukan logout.
+ERROR - 2026-07-16 03:51:30 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'3\', \'::1\', \'LOGOUT\', \'User ustadz_budi melakukan logout.\', \'2026-07-16 03:51:30\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'3\', \'::1\', \'LOGOUT\', \'User ustadz_budi melakukan logout.\', \'2026-07-16 03:51:30\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'3\', \'::1\', \'LOGOUT\', \'User ustadz_budi melakukan logout.\', \'2026-07-16 03:51:30\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(48): App\Libraries\ActivityLogger::log('LOGOUT', 'User ustadz_budi melakukan logout.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->logout()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:51:30 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 03:51:50 --> CSRF token verified.
+INFO - 2026-07-16 03:51:51 --> [ACTIVITY] LOGIN_SUCCESS | User admin_pusat berhasil login.
+ERROR - 2026-07-16 03:51:51 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:51:51\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:51:51\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 03:51:51\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(38): App\Libraries\ActivityLogger::log('LOGIN_SUCCESS', 'User admin_pusat berhasil login.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 03:51:51 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 03:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 03:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:00:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:08:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 04:12:13 --> [ACTIVITY] LOGOUT | User admin_pusat melakukan logout.
+ERROR - 2026-07-16 04:12:13 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 04:12:13\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 04:12:13\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 04:12:13\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(48): App\Libraries\ActivityLogger::log('LOGOUT', 'User admin_pusat melakukan logout.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->logout()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 04:12:13 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 04:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 04:12:25 --> CSRF token verified.
+INFO - 2026-07-16 04:12:25 --> [ACTIVITY] LOGIN_SUCCESS | User admin_pusat berhasil login.
+ERROR - 2026-07-16 04:12:25 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 04:12:25\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 04:12:25\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 04:12:25\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(38): App\Libraries\ActivityLogger::log('LOGIN_SUCCESS', 'User admin_pusat berhasil login.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 04:12:25 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 04:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 04:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 04:19:04 --> [ACTIVITY] LOGOUT | User admin_pusat melakukan logout.
+ERROR - 2026-07-16 04:19:04 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 04:19:04\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 04:19:04\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 04:19:04\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(48): App\Libraries\ActivityLogger::log('LOGOUT', 'User admin_pusat melakukan logout.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->logout()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 04:19:04 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 04:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 15:11:23 --> CSRF token verified.
+INFO - 2026-07-16 15:11:24 --> [ACTIVITY] LOGIN_FAILED | Percobaan login gagal untuk username: admin_pusat
+ERROR - 2026-07-16 15:11:24 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (NULL, \'::1\', \'LOGIN_FAILED\', \'Percobaan login gagal untuk username: admin_pusat\', \'2026-07-16 15:11:24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (NULL, \'::1\', \'LOGIN_FAILED\', \'Percobaan login gagal untuk username: admin_pusat\', \'2026-07-16 15:11:24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (NULL, \'::1\', \'LOGIN_FAILED\', \'Percobaan login gagal untuk username: admin_pusat\', \'2026-07-16 15:11:24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(42): App\Libraries\ActivityLogger::log('LOGIN_FAILED', 'Percobaan login gagal untuk username: admin_pusat')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 15:11:24 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 15:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:11:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 15:11:38 --> CSRF token verified.
+INFO - 2026-07-16 15:11:38 --> [ACTIVITY] LOGIN_SUCCESS | User admin_pusat berhasil login.
+ERROR - 2026-07-16 15:11:38 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 15:11:38\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 15:11:38\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 15:11:38\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(38): App\Libraries\ActivityLogger::log('LOGIN_SUCCESS', 'User admin_pusat berhasil login.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 15:11:38 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 15:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 15:27:53 --> [ACTIVITY] LOGOUT | User admin_pusat melakukan logout.
+ERROR - 2026-07-16 15:27:53 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 15:27:53\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 15:27:53\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 15:27:53\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(48): App\Libraries\ActivityLogger::log('LOGOUT', 'User admin_pusat melakukan logout.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->logout()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 15:27:53 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 15:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 15:28:08 --> CSRF token verified.
+INFO - 2026-07-16 15:28:08 --> [ACTIVITY] LOGIN_SUCCESS | User admin_pusat berhasil login.
+ERROR - 2026-07-16 15:28:08 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 15:28:08\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 15:28:08\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 15:28:08\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(38): App\Libraries\ActivityLogger::log('LOGIN_SUCCESS', 'User admin_pusat berhasil login.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 15:28:08 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 15:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:31:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:35:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:35:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:36:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:36:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 15:36:49 --> CSRF token verified.
+DEBUG - 2026-07-16 15:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:37:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 15:39:39 --> CSRF token verified.
+INFO - 2026-07-16 15:39:39 --> [ACTIVITY] UPDATE_PROFILE | Memperbarui data profil
+ERROR - 2026-07-16 15:39:39 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'UPDATE_PROFILE\', \'Memperbarui data profil\', \'2026-07-16 15:39:39\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'UPDATE_PROFILE\', \'Memperbarui data profil\', \'2026-07-16 15:39:39\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'UPDATE_PROFILE\', \'Memperbarui data profil\', \'2026-07-16 15:39:39\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\ProfileController.php(72): App\Libraries\ActivityLogger::log('UPDATE_PROFILE', 'Memperbarui data profil')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ProfileController->update()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 15:39:39 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+DEBUG - 2026-07-16 15:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:39:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2026-07-16 15:41:59 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 15:41:59\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 15:41:59\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 15:41:59\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(48): App\Libraries\ActivityLogger::log('LOGOUT', 'User admin_pusat melakukan logout.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->logout()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 15:41:59 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+ERROR - 2026-07-16 15:42:18 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 15:42:18\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 15:42:18\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGIN_SUCCESS\', \'User admin_pusat berhasil login.\', \'2026-07-16 15:42:18\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(38): App\Libraries\ActivityLogger::log('LOGIN_SUCCESS', 'User admin_pusat berhasil login.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 15:42:18 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+ERROR - 2026-07-16 15:42:29 --> Table 'db_tahfidz.activity_logs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 15:42:29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 15:42:29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (\'1\', \'::1\', \'LOGOUT\', \'User admin_pusat melakukan logout.\', \'2026-07-16 15:42:29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2355): CodeIgniter\Database\BaseConnection->query('INSERT INTO `activity_logs` (`user_id`, `ip_address`, `action`, `description`, `created_at`) VALUES (:user_id:, :ip_address:, :action:, :description:, :created_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Libraries\ActivityLogger.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AuthController.php(48): App\Libraries\ActivityLogger::log('LOGOUT', 'User admin_pusat melakukan logout.')
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->logout()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+ERROR - 2026-07-16 15:42:29 --> ActivityLogger gagal menyimpan ke database: Table 'db_tahfidz.activity_logs' doesn't exist
+ERROR - 2026-07-16 15:43:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\tahfidz-master\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\tahfidz-master\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_tahfidz', 3306, '', 0)
+#1 C:\xampp\htdocs\tahfidz-master\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\tahfidz-master\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\tahfidz-master\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tahfidz-master\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tahfidz-master\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\tahfidz-master\app\Controllers\AuthController.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(974): App\Controllers\AuthController->login()
+#8 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tahfidz-master\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\tahfidz-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\tahfidz-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\tahfidz-master\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\tahfidz-master\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\tahfidz-master\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\tahfidz-master\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\tahfidz-master\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\tahfidz-master\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\tahfidz-master\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\tahfidz-master\app\Controllers\AuthController.php(24): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(974): App\Controllers\AuthController->login()
+#7 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tahfidz-master\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\tahfidz-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\tahfidz-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\tahfidz-master\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2026-07-16 15:43:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(24): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
+DEBUG - 2026-07-16 15:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:43:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-07-16 15:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2026-07-16 15:43:57 --> CSRF token verified.
+ERROR - 2026-07-16 15:44:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\tahfidz-master\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\tahfidz-master\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'db_tahfidz', 3306, '', 0)
+#1 C:\xampp\htdocs\tahfidz-master\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\tahfidz-master\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\tahfidz-master\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tahfidz-master\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tahfidz-master\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\tahfidz-master\app\Controllers\AuthController.php(24): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(974): App\Controllers\AuthController->login()
+#8 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tahfidz-master\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\tahfidz-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\tahfidz-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\tahfidz-master\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\tahfidz-master\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\tahfidz-master\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\tahfidz-master\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\tahfidz-master\system\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\tahfidz-master\system\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\tahfidz-master\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\tahfidz-master\app\Controllers\AuthController.php(24): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(974): App\Controllers\AuthController->login()
+#7 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#8 C:\xampp\htdocs\tahfidz-master\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tahfidz-master\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\tahfidz-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\tahfidz-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\tahfidz-master\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2026-07-16 15:44:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login-process]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1659): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\AuthController.php(24): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\tahfidz-master\\public\\index.php')
